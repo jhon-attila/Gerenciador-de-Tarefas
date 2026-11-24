@@ -5,16 +5,12 @@ public class Tarefa {
     private String titulo;
     private String descricao;
     private EstadoTarefa estado;
-    ArrayList<Tarefa> tarefas = new ArrayList<>();
 
 
     public Tarefa(String titulo, String descicao) {
         this.titulo = titulo;
         this.descricao = descicao;
         this.estado = estado.PENDENTE;
-    }
-    public void adicionar(Tarefa tarefa) {
-        tarefas.add(tarefa);
     }
 
     public String getTitulo() {
@@ -25,11 +21,11 @@ public class Tarefa {
         this.titulo = titulo;
     }
 
-    public String getDescicao() {
+    public String getDescricao() {
         return descricao;
     }
 
-    public void setDescicao(String descicao) {
+    public void setDescricao(String descicao) {
         this.descricao = descicao;
     }
 
@@ -37,12 +33,8 @@ public class Tarefa {
         return estado;
     }
 
-    public ArrayList<Tarefa> getTarefas() {
-        return tarefas;
-    }
-
-    public void setTarefas(ArrayList<Tarefa> tarefas) {
-        this.tarefas = tarefas;
+    public void setEstado(EstadoTarefa estado) {
+        this.estado = estado;
     }
 
     @Override
